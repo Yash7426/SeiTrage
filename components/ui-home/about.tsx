@@ -15,9 +15,9 @@ const About: React.FC<AboutProps> = ({ scrollYProgress }) => {
       // style={{ scale, rotate }}
       className="h-screen bg-white flex pb-[2vh] pt-[8vh] px-[5vw] gap-6"
     >
-      <div className="w-[35%]">
-        <h1 className="font-marvin text-[80px]">About Us</h1>
-        <div className="text-[16px] font-semibold">
+      <div className="w-[35%] flex gap-[30px] flex-col">
+        <h1 className="font-montBold text-[70px]">ABOUT US</h1>
+        <div className="text-[16px] font-montRegular">
           At SeiTrage, we revolutionize decentralized finance with AI-powered
           predictive arbitrage. By integrating advanced AI analytics, social
           sentiment tracking, and high-speed execution on the Sei blockchain,

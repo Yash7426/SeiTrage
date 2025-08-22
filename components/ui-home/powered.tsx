@@ -15,8 +15,8 @@ const Powered: React.FC<PoweredProps> = ({ scrollYProgress }) => {
     //   style={{ scale, rotate }}
       className="h-[35vh] bg-white flex flex-col justify-top gap-10"
     >
-      <div className="font-marvin text-[40px] text-black text-center">
-        Powered By
+      <div className="font-montMedium text-[30px] text-black text-center">
+        POWERED BY
       </div>
       <div className="flex flex-row justify-between px-10">
         {[

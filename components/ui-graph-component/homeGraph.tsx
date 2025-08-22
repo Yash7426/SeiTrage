@@ -223,7 +223,7 @@ export const initialNodes: Node[] = [
     id: "1",
     position: { x: 0, y: 0 },
     data: {
-      label: "SeiTrage",
+      label: "SEITRAGE",
     },
     className: styles.node,
     type: "central",
@@ -364,10 +364,10 @@ interface AgentNodeProps {
 }
 const AgentNode = ({ data }: AgentNodeProps) => {
   return (
-    <div className="p-2 h-32 w-32 shadow-lg rounded-full bg-[#CAA0EB] dark:bg-neutral-800 border border-brand-600 dark:border-brand-600">
+    <div className="p-2 h-32 w-32 shadow-lg rounded-full bg-[#a64944] dark:bg-neutral-800 border border-brand-600 dark:border-brand-600">
       <Handle type="source" position={Position.Right} className="" />
       <div className="flex flex-col items-center justify-center h-full w-full text-neutral-800 dark:text-white">
-        <span className="text-sm font-semibold text-center">{data.name}</span>
+        <span className="text-sm font-semibold text-center text-white font-montRegular">{data.name}</span>
       </div>
       <Handle
         type="target"
@@ -385,11 +385,11 @@ interface CentralNodeProps {
 const proOptions: ProOptions = { account: "paid-pro", hideAttribution: true };
 const CentralNode = ({ data }: CentralNodeProps) => {
   return (
-    <div className="p-8 rounded-full border-2 border-brand-600 bg-[#8902F4] text-white font-marvin text-[20px] dark:bg-[#4f3e17] z-[100] shadow-brand-600/40 shadow-lg">
+    <div className="p-8 rounded-full border-2 border-brand-600 bg-[#9E1F19] text-white font-montMedium text-[20px] dark:bg-[#4f3e17] z-[100] shadow-brand-600/40 shadow-lg">
       <Handle
         type="source"
         position={Position.Right}
-        className="w-3 h-3 bg-violet-500"
+        className="w-3 h-3 bg-[#a34944]"
       />
       <div className="flex items-center justify-center">{data.label}</div>
       <Handle type="target" position={Position.Left} />
@@ -402,7 +402,7 @@ type ExampleProps = {
   strength?: number;
   distance?: number;
 };
-const defaultEdgeOptions = { style: { stroke: "#8902F4", strokeWidth: 2 } };
+const defaultEdgeOptions = { style: { stroke: "#9E1F19", strokeWidth: 2 } };
 const nodeTypes = {
   central: CentralNode,
   agent: AgentNode,
@@ -434,7 +434,7 @@ function Flow({ strength = -500, distance = 150 }: ExampleProps = {}) {
     [setEdges]
   );
   return (
-    <div className="h-full mx-auto border rounded-[30px] ">
+    <div className="h-full mx-auto border ">
       <ReactFlow
         nodes={nodes}
         edges={edges}

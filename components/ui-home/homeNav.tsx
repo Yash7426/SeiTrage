@@ -7,20 +7,20 @@ const HomeNav = () => {
       <div className='flex px-[20px] py-[10px] justify-between items-center h-[10vh]' >
         <div className='text-black'>            
             <Image
-                src={"/images/sei-logo.svg"}
+                src={"/images/sei_logo.svg"}
                 alt="SEI"
-               width={50}
-               height={50}
+               width={80}
+               height={80}
             />
         </div>
-        <div className='font-marvin text-[35px] flex flex-row gap-3'>
+        <div className='font-bebas text-[35px] flex flex-row gap-2 items-center align-center'>
             <Image
-              src={"/images/logo.svg"}
+              src={"/images/seitrage_logo.svg"}
               alt='.'
-              width={30}
-              height={30}
+              width={40}
+              height={40}
             />
-            SeiTrage
+            <p>SEITRAGE</p>
         </div>
         <div><Login/></div>
       </div>

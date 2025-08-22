@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "SeiTrage",
   description: "AI powered arbitrage platform built on SEI",
   // change the logo here
-  icons: "/images/sei-logo.svg",
+  icons: "/images/seitrage_logo.svg",
 };
 
 export const viewport = {
@@ -33,6 +33,111 @@ const marvinVisionsBig = localFont({
     },
   ],
   variable: "--font-marvin", // creates a CSS variable for the font
+});
+
+const bebasNeue = localFont({
+  src: [
+    {
+      path: "../public/fonts/BebasNeue-Regular.woff",
+      weight: "400", // adjust if you have other weights
+      style: "normal",
+    },
+  ],
+  variable: "--font-bebas", // creates a CSS variable for the font
+});
+
+const montRegular = localFont({
+  src: [
+    {
+      path: "../public/fonts/NeueMontreal-Regular.woff",
+      style: "normal",
+    },
+  ],
+  variable: "--font-montRegular", // creates a CSS variable for the font
+});
+
+// Italic
+export const montItalic = localFont({
+  src: [
+    {
+      path: "../public/fonts/NeueMontreal-Italic.woff",
+      style: "italic",
+      weight: "400",
+    },
+  ],
+  variable: "--font-montItalic",
+});
+
+// Medium
+export const montMedium = localFont({
+  src: [
+    {
+      path: "../public/fonts/NeueMontreal-Medium.woff",
+      style: "normal",
+      weight: "500",
+    },
+  ],
+  variable: "--font-montMedium",
+});
+
+// Medium Italic
+export const montMediumItalic = localFont({
+  src: [
+    {
+      path: "../public/fonts/NeueMontreal-MediumItalic.woff",
+      style: "italic",
+      weight: "500",
+    },
+  ],
+  variable: "--font-montMediumItalic",
+});
+
+// Light
+export const montLight = localFont({
+  src: [
+    {
+      path: "../public/fonts/NeueMontreal-Light.woff",
+      style: "normal",
+      weight: "300",
+    },
+  ],
+  variable: "--font-montLight",
+});
+
+// Light Italic
+export const montLightItalic = localFont({
+  src: [
+    {
+      path: "../public/fonts/NeueMontreal-LightItalic.woff",
+      style: "italic",
+      weight: "300",
+    },
+  ],
+  variable: "--font-montLightItalic",
+});
+
+// Bold
+export const montBold = localFont({
+  src: [
+    {
+      path: "../public/fonts/NeueMontreal-Bold.woff",
+      style: "normal",
+      weight: "700",
+    },
+  ],
+  variable: "--font-montBold",
+});
+
+// Bold Italic
+export const montBoldItalic = localFont({
+  src: [
+    {
+      path: "../public/fonts/NeueMontreal-BoldItalic.woff",
+      style: "italic",
+      weight: "700",
+    },
+  ],
+  variable: "--font-montBoldItalic",
 });
 
 const LIGHT_THEME_COLOR = "hsl(0 0% 100%)";
@@ -63,7 +168,19 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${marvinVisionsBig.variable} ${montserrat.variable}`}
+      className={`
+                  ${marvinVisionsBig.variable} 
+                  ${montserrat.variable} 
+                  ${montRegular.variable}
+                  ${montItalic.variable}
+                  ${montMedium.variable}
+                  ${montMediumItalic.variable}
+                  ${montLight.variable}
+                  ${montLightItalic.variable}
+                  ${montBold.variable}
+                  ${montBoldItalic.variable}
+                  ${bebasNeue.variable}
+                `}
       suppressHydrationWarning
     >
       <head>

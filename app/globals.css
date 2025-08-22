@@ -114,6 +114,13 @@ html {
 
   body {
     @apply bg-background text-foreground;
+    background-image: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent calc(20% - 1px), /* space before line */
+    rgba(0, 0, 0, 0.5) calc(20% - 1px), /* line */
+    rgba(0, 0, 0, 0.5) 20% /* after line */
+  );
   }
 
   @font-face {

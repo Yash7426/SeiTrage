@@ -17,8 +17,8 @@ const TeamCard: React.FC<TeamCardProps> = ({ name, posi, img }) =>{
         height={220}
         />
         <div className='flex flex-col justify-center items-center'>
-            <h1 className='text-[20px] font-marvin leading-[20px]'>{name}</h1>
-            <p className='text-[14px]'>{posi}</p>
+            <h1 className='text-[20px] font-montMedium leading-[20px]'>{name}</h1>
+            <p className='text-[14px] font-montRegular'>{posi}</p>
         </div>
     </div>
   )

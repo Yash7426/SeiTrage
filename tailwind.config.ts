@@ -13,9 +13,27 @@ const config: Config = {
       mono: ['geist-mono'],
     },
     extend: {
+      keyframes: {
+        swing: {
+          "0%, 100%": { transform: "rotate(-10deg)" },
+          "50%": { transform: "rotate(10deg)" },
+        },
+      },
+      animation: {
+        swing: "swing 6s ease-in-out infinite", // adjust speed
+      },
       fontFamily: {
         // Create a custom font family called 'marvin' using the CSS variable
         marvin: ['var(--font-marvin)', 'sans-serif'],
+        bebas: ['var(--font-bebas)', 'sans-serif'],
+        montRegular: ['var(--font-montRegular)', 'sans-serif'],
+        montItalic: ['var(--font-montItalic)', 'sans-serif'],
+        montMedium: ['var(--font-montMedium)', 'sans-serif'],
+        montMediumItalic: ['var(--font-montMediumItalic)', 'sans-serif'],
+        montLight: ['var(--font-montLight)', 'sans-serif'],
+        montLightItalic: ['var(--font-montLightItalic)', 'sans-serif'],
+        montBold: ['var(--font-montBold)', 'sans-serif'],
+        montBoldItalic: ['var(--font-montBoldItalic)', 'sans-serif'],
         montserrat: ["var(--font-montserrat)", "sans-serif"],
       },
       borderRadius: {

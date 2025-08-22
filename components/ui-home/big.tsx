@@ -12,11 +12,11 @@ const Big: React.FC<BigProps> = ({ scrollYProgress }) => {
   return (
     <motion.div
       // style={{ scale, rotate }}
-      className="h-[120vh] bg-[#111111] text-white text-[100px] leading-[110px] flex font-marvin justify-center text-center items-center"
+      className="h-[120vh] bg-[#111111] text-white text-[90px] leading-[110px] flex font-montBold justify-center text-center items-center"
     >
-      <h1 className="w-[60%]">
-        The Future Belongs to Those Who Predict It{" "}
-        <span className="text-[#8902F4]">First.</span>
+      <h1 className="w-[50%]">
+        THE FUTURE BELONGS TO THOSE WHO PREDICT IT{" "}
+        <span className="text-[#9E1F19]">FIRST.</span>
       </h1>
     </motion.div>
   );

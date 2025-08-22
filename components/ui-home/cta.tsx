@@ -16,15 +16,15 @@ const Cta: React.FC<CtaProps> = ({ scrollYProgress }) => {
       // style={{ scale, rotate }}
       className="h-[120vh] bg-[#111111] flex flex-col items-center justify-center gap-[6vh]"
     >
-      <div className="font-marvin text-[100px] text-white text-center pt-[3vh] flex flex-col items-center leading-[120px]">
+      <div className="font-montBold text-[100px] text-white text-center flex flex-col items-center leading-[120px]">
         <h1 className="flex flex-row">
-          Trade smarter<span className="text-[#8902F4]">.</span>
+          TRADE SMARTER<span className="text-[#9E1F19]">.</span>
         </h1>
         <h1 className="flex flex-row">
-          Move faster<span className="text-[#8902F4]">.</span>
+          MOVE FASTER<span className="text-[#9E1F19]">.</span>
         </h1>
         <h1 className="flex flex-row">
-          Stay ahead<span className="text-[#8902F4]">.</span>
+          STAY AHEAD<span className="text-[#9E1F19]">.</span>
         </h1>
       </div>
       <Butn />

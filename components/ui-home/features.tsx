@@ -26,10 +26,9 @@ const Features: React.FC<FeaturesProps> = ({ scrollYProgress }) => {
     >
       <div className="flex flex-row justify-between">
         <div className="font-marvin text-[30px] flex flex-row items-center gap-2">
-        <Image src="/images/logo.svg" alt="sei" width={30} height={30} />
-        <p>SeiTrage</p>
+        <Image src="/images/seitrage_logo.svg" alt="sei" width={50} height={50} />
         </div>
-        <h1 className="font-marvin text-[80px]">Features</h1>
+        <h1 className="font-montBold text-[70px]">FEATURES</h1>
       </div>
       <Image
         src="/images/features.svg"

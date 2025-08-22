@@ -40,36 +40,25 @@ const getFloatingAnimation = (index:number) => {
 const LandingSec = () => {
   const router = useRouter()
   return (
-    <div className="relative overflow-y-visible h-screen">
-      {/* Floating Crypto Icons */}
-      {cryptoIcons.map((icon, index) => (
-        <motion.div
-          key={index}
-          className="absolute"
-          style={getPosition(index)}
-          animate={getFloatingAnimation(index)}
-        >
-          <img src={icon} alt="crypto-icon" width={200} height={200} className='w-12 h-12 md:w-24 md:h-24 rounded-full ' />
-        </motion.div>
-      ))}
-      
+    <div 
+      className="relative overflow-y-visible h-screen flex gap-[10%] flex-col"
+      >
       <div className='flex flex-col justify-center items-center'>
-        <div className='font-marvin text-[74px] leading-[84px] text-center flex flex-row gap-2'>
-          <Image src={'/images/star.svg'} alt="*" width={60} height={60} />
-          The Future Of Arbitrage is here
-          <Image src={'/images/star.svg'} alt="*" width={60} height={60} />
+
+        <div className='font-montRegular text-[40px] leading-[84px] text-center flex flex-row'>
+          THE FUTURE OF ARBI<span className='text-[#9E1F19]'>TRAGE &nbsp;</span> IS HERE
         </div>
-        <div className='font-marvin text-[250px] leading-[250px] flex flex-row'>
-          SEI <p className='text-[#8902F4]'>TRAGE</p>
+        <div className='font-montBold text-[250px] leading-[220px] flex flex-row text-[#9E1F19]'>
+          SEI <p className='text-black'>TRAGE</p>
         </div>
       </div>
       <div className='flex flex-col items-center justify-center gap-3'>
-        <p className='w-[35%] text-center'>
+        <p className='w-[40%] text-center font-montRegular'>
           Harness the power of AI-driven predictions and blockchain efficiency to capture profitable arbitrage opportunities
         </p>
         <h1 onClick={()=>{
           router.push("/chat")
-        }} className='cursor-pointer font-marvin text-[30px] text-white border px-4 py-2 rounded-[50px] bg-black w-[200px] text-center hover:bg-white hover:border-black hover:text-black transition duration-300 ease-in-out'>
+        }} className='cursor-pointer font-bebas text-[30px] text-white border px-2 py-1 bg-black w-[200px] text-center hover:bg-white hover:border-black hover:text-black transition duration-300 ease-in-out'>
           GET STARTED
         </h1>
       </div>
