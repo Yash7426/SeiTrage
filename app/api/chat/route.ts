@@ -26,7 +26,7 @@ import { updateDocument } from '@/lib/ai/tools/update-document';
 import { requestSuggestions } from '@/lib/ai/tools/request-suggestions';
 import { getWeather } from '@/lib/ai/tools/get-weather';
 import { getBalance } from '@/lib/ai/tools/get-balance';
-import { getTokenInfo } from '@/lib/ai/tools/get-token-info';
+import { transferSei } from '@/lib/ai/tools/transfer-sei';
 
 export const maxDuration = 60;
 
@@ -73,8 +73,8 @@ export async function POST(request: Request) {
             ? []
             : [
                 'getWeather',
+                'transferSei',
                 'getBalance',
-                'getTokenInfo',
                 'createDocument',
                 'updateDocument',
                 'requestSuggestions',
@@ -84,7 +84,7 @@ export async function POST(request: Request) {
         tools: {
           getWeather,
           getBalance,
-          getTokenInfo,
+          transferSei,
           createDocument: createDocument({ session, dataStream }),
           updateDocument: updateDocument({ session, dataStream }),
           requestSuggestions: requestSuggestions({

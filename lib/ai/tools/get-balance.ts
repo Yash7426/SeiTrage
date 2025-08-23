@@ -1,9 +1,7 @@
 import { tool } from 'ai';
 import { z } from 'zod';
-// import { callTool } from '@/lib/mcp/client';
 import axios from 'axios';
-
-const MCP_SERVER_URL = "http://localhost:3001";
+import { MCP_SERVER_URL } from './transfer-sei';
 
 export const getBalance = tool({
   description: 'Get the native token balance for an address on a given network',
