@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { useTransform, motion, type MotionValue } from "framer-motion";
+import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 interface PoweredProps {
   scrollYProgress: MotionValue<number>;
@@ -8,28 +8,22 @@ interface PoweredProps {
 
 const Powered: React.FC<PoweredProps> = ({ scrollYProgress }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
+
+  // build array of items dynamically
+  const items = Array.from({ length: 10 }, (_, i) => ({
+    url: `/images/s${i + 1}.svg`, // adjust path according to where your svgs are stored (public/images folder recommended)
+  }));
 
   return (
     <motion.div
-    //   style={{ scale, rotate }}
-      className="h-[35vh] bg-white flex flex-col justify-top gap-10"
+      style={{ scale }}
+      
+      className="h-[35vh] bg-white flex flex-col gap-10"
     >
       <div className="font-montMedium text-[30px] text-black text-center">
         POWERED BY
       </div>
-      <div className="flex flex-row justify-between px-10">
-        {[
-          { src: "/images/dora.svg", alt: "DoraHacks" }
-          // { src: "/images/anon.svg", alt: "Anon" },
-          // { src: "/images/allora.svg", alt: "Allora" },
-          // { src: "/images/debridge.svg", alt: "Debridge" },
-          // { src: "/images/zerebro.svg", alt: "Zerebro" },
-          // { src: "/images/dwflabs.svg", alt: "DWF Labs" },
-        ].map(({ src, alt }) => (
-          <Image key={alt} src={src} alt={alt} width={160} height={100} />
-        ))}
-      </div>
+      <InfiniteMovingCards items={items} />
     </motion.div>
   );
 };

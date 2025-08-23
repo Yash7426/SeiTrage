@@ -13,6 +13,7 @@ const Footer: React.FC<FooterProps> = ({ scrollYProgress }) => {
   return (
     <motion.div
       // style={{ scale, rotate }}
+      
       className="h-[100vh] text-[150px] flex justify-evenly flex-col items-center font-montBold text-[#9E1F19]"
     >
       <div className="flex flex-col items-center">

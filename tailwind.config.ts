@@ -13,15 +13,6 @@ const config: Config = {
       mono: ['geist-mono'],
     },
     extend: {
-      keyframes: {
-        swing: {
-          "0%, 100%": { transform: "rotate(-10deg)" },
-          "50%": { transform: "rotate(10deg)" },
-        },
-      },
-      animation: {
-        swing: "swing 6s ease-in-out infinite", // adjust speed
-      },
       fontFamily: {
         // Create a custom font family called 'marvin' using the CSS variable
         marvin: ['var(--font-marvin)', 'sans-serif'],
