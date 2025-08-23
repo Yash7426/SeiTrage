@@ -25,6 +25,8 @@ import { createDocument } from '@/lib/ai/tools/create-document';
 import { updateDocument } from '@/lib/ai/tools/update-document';
 import { requestSuggestions } from '@/lib/ai/tools/request-suggestions';
 import { getWeather } from '@/lib/ai/tools/get-weather';
+import { getBalance } from '@/lib/ai/tools/get-balance';
+import { getTokenInfo } from '@/lib/ai/tools/get-token-info';
 
 export const maxDuration = 60;
 
@@ -71,6 +73,8 @@ export async function POST(request: Request) {
             ? []
             : [
                 'getWeather',
+                'getBalance',
+                'getTokenInfo',
                 'createDocument',
                 'updateDocument',
                 'requestSuggestions',
@@ -79,6 +83,8 @@ export async function POST(request: Request) {
         experimental_generateMessageId: generateUUID,
         tools: {
           getWeather,
+          getBalance,
+          getTokenInfo,
           createDocument: createDocument({ session, dataStream }),
           updateDocument: updateDocument({ session, dataStream }),
           requestSuggestions: requestSuggestions({
@@ -120,7 +126,8 @@ export async function POST(request: Request) {
         sendReasoning: true,
       });
     },
-    onError: () => {
+    onError: (e) => {
+      console.log("err",e)
       return 'Oops, an error occured!';
     },
   });

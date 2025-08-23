@@ -185,7 +185,7 @@ export async function getChatById({ id }: { id: string }) {
 
 export async function saveMessages({ messages }: { messages: Array<Message> }) {
   try {
-    return await db.insert(message).values(messages);
+    if(messages.length>0) return await db.insert(message).values(messages);
   } catch (error) {
     console.error("Failed to save messages in database", error);
     throw error;
@@ -338,7 +338,7 @@ export async function saveSuggestions({
   suggestions: Array<Suggestion>;
 }) {
   try {
-    return await db.insert(suggestion).values(suggestions);
+    if(suggestions.length>0) return await db.insert(suggestion).values(suggestions);
   } catch (error) {
     console.error("Failed to save suggestions in database");
     throw error;
