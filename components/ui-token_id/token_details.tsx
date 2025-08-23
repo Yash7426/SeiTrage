@@ -43,7 +43,7 @@ const TokenDetails = ({
               ({priceChange.toFixed(2)}%)
             </span>
           )}
-          <span className="text-purple-500 text-lg">★</span>
+          <span className="text-[#9E1F19] text-lg">★</span>
         </div>
         <span className="text-xs md:text-xl font-bold">
           ${price.toFixed(4)}

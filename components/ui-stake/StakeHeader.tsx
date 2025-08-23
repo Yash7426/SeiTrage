@@ -75,9 +75,9 @@ const StakeHeader: React.FC = () => {
         <input
           type="text"
           placeholder="Search Tokens"
-          className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-[#ffffff] focus:border-[#8902F4]"
+          className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-[#ffffff] focus:border-[#9E1F19]"
         />
-        <MoveRight color="white" className="absolute top-0 bottom-0 w-8 h-8 my-auto text-gray-400 right-4 border bg-[#8902F4] rounded-full p-1" />
+        <MoveRight color="white" className="absolute top-0 bottom-0 w-8 h-8 my-auto text-gray-400 right-4 border bg-[#9E1F19] rounded-full p-1" />
       </div>
       <h2 className="text-xl my-8 font-bold text-[#2D2D2D]">Tokens</h2>
       <input
@@ -85,14 +85,14 @@ const StakeHeader: React.FC = () => {
         placeholder="Enter Amount"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
-        className="w-full py-3 px-4 mb-4 text-gray-500 border rounded-md outline-none bg-[#ffffff] focus:border-[#8902F4]"
+        className="w-full py-3 px-4 mb-4 text-gray-500 border rounded-md outline-none bg-[#ffffff] focus:border-[#9E1F19]"
       />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-6 max-w-7xl mx-auto">
         {stakeTokens.map((token, index) => (
           <div
             key={index}
             onClick={() => handleSelectToken(token.name)}
-            className={`cursor-pointer rounded-lg ${selectedToken === token.name ? "border border-[#8902F4]" : "border"}`}
+            className={`cursor-pointer rounded-lg ${selectedToken === token.name ? "border border-[#9E1F19]" : "border"}`}
           >
             <StakeCard {...token} />
           </div>
@@ -100,7 +100,7 @@ const StakeHeader: React.FC = () => {
       </div>
       <button
         onClick={handleStake}
-        className="w-full mt-6 py-3 bg-[#8902F4] text-white font-bold rounded-md hover:bg-[#6a01c3]"
+        className="w-full mt-6 py-3 bg-[#9E1F19] text-white font-bold rounded-md hover:bg-[#9f443f]"
       >
         Stake
       </button>

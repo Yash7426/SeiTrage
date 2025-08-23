@@ -40,7 +40,7 @@ const TokenCard: React.FC<TokenCardProps> = ({ name, logo, price, volume }) => {
           <div className="flex justify-between w-full">
             <h2 className="font-bold text-lg font-marvin">
               {name}
-              <span className="pl-1 text-purple-500">⭐</span>
+              <span className="pl-1 text-[#9E1F19]">⭐</span>
             </h2>
             <span className="text-[#1D1D1D] text-sm cursor-pointer pt-1">
               24hr Volume

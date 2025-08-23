@@ -36,7 +36,7 @@ export function NavUser({
   const { setTheme, theme } = useTheme();
 
   return (
-    <SidebarMenu className="bg-[#8902F4] my-2 rounded-md mx-auto text-xs">
+    <SidebarMenu className="bg-[#9E1F19] my-2 rounded-md mx-auto text-xs">
       <SidebarMenuItem>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

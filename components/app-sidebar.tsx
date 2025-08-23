@@ -173,9 +173,9 @@ export function AppSidebar({ user }: { user: User | undefined }) {
               }}
               className="flex flex-row gap-3 items-center"
             >
-              <span className=" text-3xl font-marvin px-2 hover:text-[#bcbbbb] rounded-md cursor-pointer flex flex-row gap-3">
+              <span className="text-3xl font-bebas px-2 hover:text-[#bcbbbb] rounded-md cursor-pointer flex flex-row gap-2 items-center">
                 <Image
-                  src={"/images/logo.svg"}
+                  src={"/images/seitrage_logo.svg"}
                   alt=""
                   width={24}
                   height={24}

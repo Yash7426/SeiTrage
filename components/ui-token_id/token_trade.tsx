@@ -52,7 +52,7 @@ export default function TradeChatTabs() {
         <Button
           className={`cursor-pointer font-marvin w-[50%] text-center py-[26px] text-md ${
             activeTab === "trade"
-              ? "bg-[#8902F4] hover:bg-[#8902F4]"
+              ? "bg-[#9E1F19] hover:bg-[#9E1F19]"
               : "bg-transparent hover:bg-transparent"
           }`}
           onClick={() => setActiveTab("trade")}
@@ -62,7 +62,7 @@ export default function TradeChatTabs() {
         <Button
           className={`cursor-pointer font-marvin w-[50%] text-center py-[26px] text-md ${
             activeTab === "chat"
-              ? "bg-[#8902F4] hover:bg-[#8902F4]"
+              ? "bg-[#9E1F19] hover:bg-[#9E1F19]"
               : "bg-transparent hover:bg-transparent"
           }`}
           onClick={() => setActiveTab("chat")}
@@ -103,7 +103,7 @@ export default function TradeChatTabs() {
               onClick={() => {
                 SetModalOpen("Sell");
               }}
-              className="bg-[#8902F4] cursor-pointer mt-2 w-full rounded-md py-2 font-bold hover:bg-purple-700"
+              className="bg-[#9E1F19] cursor-pointer mt-2 w-full rounded-md py-2 font-bold hover:bg-[#9c3d38]"
             >
               SELL
             </Button>
@@ -119,7 +119,7 @@ export default function TradeChatTabs() {
               onClick={() => {
                 SetModalOpen2("Buy");
               }}
-              className="bg-[#8902F4] cursor-pointer mt-2 w-full rounded-md py-2 font-bold hover:bg-purple-700"
+              className="bg-[#9E1F19] cursor-pointer mt-2 w-full rounded-md py-2 font-bold hover:bg-[#963833]"
             >
               BUY
             </Button>
@@ -140,7 +140,7 @@ export default function TradeChatTabs() {
               onClick={() => {
                 SetModalOpen3("Swap");
               }}
-              className="bg-[#8902F4] cursor-pointer mt-2 w-full rounded-md py-2 font-bold hover:bg-purple-700"
+              className="bg-[#9E1F19] cursor-pointer mt-2 w-full rounded-md py-2 font-bold hover:bg-[#964c48]"
             >
               SWAP
             </Button>

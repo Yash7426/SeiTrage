@@ -13,13 +13,14 @@ const HomeNav = () => {
                height={80}
             />
         </div>
-        <div className='font-bebas text-[35px] flex flex-row items-center align-center'>
+        <div className='font-bebas text-[35px] flex flex-row items-center gap-2 align-center'>
             <Image
               src={"/images/seitrage_logo.svg"}
               alt='.'
               width={40}
               height={40}
             />
+            <p className="font-bebas">SEITRAGE</p>
         </div>
         <div><Login/></div>
       </div>

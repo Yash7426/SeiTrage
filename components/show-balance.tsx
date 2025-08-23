@@ -13,7 +13,7 @@ address,balance,network
 }) => {
   return (
     <div
-      className="cursor-pointer rounded-lg border-[1px] border-[#8902F4]"
+      className="cursor-pointer rounded-lg border-[1px] border-[#9E1F19]"
     >
       <div className="flex px-4 py-2 items-center gap-2">
         <Image
@@ -28,7 +28,7 @@ address,balance,network
             <div className="flex justify-between w-full">
               <h2 className="font-bold text-lg font-marvin">
                 {network}
-                <span className="pl-1 text-purple-500">⭐</span>
+                <span className="pl-1 text-[#9E1F19]">⭐</span>
               </h2>
             </div>
             <div className="flex justify-between">

@@ -141,11 +141,11 @@ const TokenHeader: React.FC = () => {
         <input
           type="text"
           placeholder="Search Tokens"
-          className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-[#ffffff] focus:border-[#8902F4]"
+          className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-[#ffffff] focus:border-[#9E1F19]"
         />
         <MoveRight
           color="white"
-          className="absolute top-0 bottom-0 w-8 h-8 my-auto text-gray-400 right-4 border bg-[#8902F4] rounded-full p-1"
+          className="absolute top-0 bottom-0 w-8 h-8 my-auto text-gray-400 right-4 border bg-[#9E1F19] rounded-full p-1"
         />
       </div>
       <h2 className="text-xl my-8 font-bold text-[#2D2D2D]">Trending Tokens</h2>

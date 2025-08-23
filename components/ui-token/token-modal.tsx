@@ -52,7 +52,7 @@ const TokenModal: React.FC<CustomModalProps> = ({
                 if(time !="" && toNumber(time)>0)
                     router.push(`/token/${coin}?t=${time}`)
               }}
-              className="bg-[#8902F4] cursor-pointer mt-6 w-[50%] rounded-md py-2 font-bold hover:bg-purple-700"
+              className="bg-[#9E1F19] cursor-pointer mt-6 w-[50%] rounded-md py-2 font-bold hover:bg-[#a23c36]"
             >
               View Token
             </Button>

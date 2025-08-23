@@ -8,7 +8,7 @@ interface SentimentMeterProps {
 const SentimentMeter = ({ value }: SentimentMeterProps) => {
   return (
     <div className="flex flex-col justify-center rounded-2xl border border-[#E4E4E4]">
-      <h2 className="text-md px-4 md:px-6 py-2 text-[#FFFFFF] font-semibold bg-[#8902F4] rounded-t-2xl text-center">Sentiment Analysis on <span className="font-marvin text-xl">X</span></h2>
+      <h2 className="text-md px-4 md:px-6 py-2 text-[#FFFFFF] font-semibold bg-[#9E1F19] rounded-t-2xl text-center">Sentiment Analysis on <span className="font-marvin text-xl">X</span></h2>
       <GaugeChart
         id="sentiment-gauge"
         nrOfLevels={20} // Number of divisions in the gauge

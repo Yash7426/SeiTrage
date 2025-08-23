@@ -14,6 +14,12 @@ const Cta: React.FC<CtaProps> = ({ scrollYProgress }) => {
   return (
     <motion.div
       // style={{ scale, rotate }}
+      style={{
+        backgroundImage: "url('/images/fade_logo.svg')",
+        backgroundSize: "40%",
+        backgroundPosition: "0 60%",
+        backgroundRepeat: "no-repeat",
+      }}
       className="h-[120vh] bg-[#111111] flex flex-col items-center justify-center gap-[6vh]"
     >
       <div className="font-montBold text-[100px] text-white text-center flex flex-col items-center leading-[120px]">

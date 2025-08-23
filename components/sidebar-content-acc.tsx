@@ -82,7 +82,7 @@ export function NavMain({
             // }}
             className={`px-2 hover:no-underline rounded-md ${
               active === "chat"
-                ? "bg-[#8902F4] text-white text-xl font-marvin font-bold"
+                ? "bg-[#9E1F19] text-white text-xl font-marvin font-bold"
                 : "text-[#8C8C8C] text-sm font-semibold "
             }`}
           >
@@ -128,7 +128,7 @@ export function NavMain({
         }}
         className={`cursor-pointer py-[12px] px-2 rounded-md ${
           active === "token"
-            ? "bg-[#8902F4] text-white font-marvin"
+            ? "bg-[#9E1F19] text-white font-marvin"
             : "text-[#8C8C8C] font-semibold bg-[#1D1D1D]"
         }`}
       >
@@ -143,7 +143,7 @@ export function NavMain({
         }}
         className={`cursor-pointer py-[12px] px-2 rounded-md ${
           active === "stake"
-            ? "bg-[#8902F4] text-white font-marvin"
+            ? "bg-[#9E1F19] text-white font-marvin"
             : "text-[#8C8C8C] font-semibold bg-[#1D1D1D]"
         }`}
       >
@@ -158,7 +158,7 @@ export function NavMain({
         }}
         className={`cursor-pointer py-[12px] px-2 rounded-md ${
           active === "account"
-            ? "bg-[#8902F4] text-white font-marvin"
+            ? "bg-[#9E1F19] text-white font-marvin"
             : "text-[#8C8C8C] font-semibold bg-[#1D1D1D]"
         }`}
       >
@@ -173,7 +173,7 @@ export function NavMain({
         }}
         className={`cursor-pointer py-[12px] px-2 rounded-md ${
           active === "portfolio"
-            ? "bg-[#8902F4] text-white font-marvin"
+            ? "bg-[#9E1F19] text-white font-marvin"
             : "text-[#8C8C8C] font-semibold bg-[#1D1D1D]"
         }`}
       >
