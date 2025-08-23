@@ -24,6 +24,7 @@ import { MessageEditor } from './message-editor';
 import { DocumentPreview } from './document-preview';
 import { MessageReasoning } from './message-reasoning';
 import ShowBalance from './show-balance';
+import ShowTransfer from './show-transfer';
 
 const PurePreviewMessage = ({
   chatId,
@@ -150,6 +151,8 @@ const PurePreviewMessage = ({
                           <Weather weatherAtLocation={result} />
                         ) : toolName === 'getBalance' ? (
                           <ShowBalance {...result} />
+                        ) : toolName === 'transferSei' ? (
+                          <ShowTransfer {...result} />
                         )
                         : toolName === 'createDocument' ? (
                           <DocumentPreview

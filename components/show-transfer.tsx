@@ -8,6 +8,7 @@ interface ShowTransferProps {
   sender: string;
   receiver: string;
   amount: string;
+  hash:string;
 }
 
 const ShowTransfer: React.FC<ShowTransferProps> = ({
@@ -15,6 +16,7 @@ const ShowTransfer: React.FC<ShowTransferProps> = ({
   receiver,
   amount,
   network,
+  hash
 }) => {
   return (
     <div className="flex rounded-lg border-[1px] border-[#9E1F19] px-4 py-3 w-full">
