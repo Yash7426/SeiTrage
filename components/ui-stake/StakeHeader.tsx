@@ -134,7 +134,7 @@ const StakeHeader: React.FC = () => {
 
   const handleStake = () => {
     if (selectedToken && amount) {
-      if (selectedToken === "Beets Staked Sonic") {
+      if (selectedToken === "Silo") {
         enter();
       } else if (selectedToken === "Origin Sonic") {
         enter1();
