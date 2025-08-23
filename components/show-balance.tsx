@@ -13,7 +13,7 @@ address,balance,network
 }) => {
   return (
     <div
-      className="cursor-pointer rounded-lg border-[1px] border-[#9E1F19]"
+      className="rounded-lg border-[1px] border-[#9E1F19]"
     >
       <div className="flex px-4 py-2 items-center gap-2">
         <Image
