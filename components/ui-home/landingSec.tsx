@@ -41,14 +41,14 @@ const LandingSec = () => {
   const router = useRouter()
   return (
     <div 
-      className="relative overflow-y-visible h-screen flex gap-[10%] flex-col"
+      className="relative overflow-y-visible h-screen flex flex-col"
       >
       <div className='flex flex-col justify-center items-center'>
 
         <div className='font-montRegular text-[40px] leading-[84px] text-center flex flex-row'>
           THE FUTURE OF ARBI<span className='text-[#9E1F19]'>TRAGE &nbsp;</span> IS HERE
         </div>
-        <div className='font-montBold text-[250px] leading-[220px] flex flex-row text-[#9E1F19]'>
+        <div className='font-orborn text-[250px] leading-[300px] flex flex-row text-[#9E1F19]'>
           SEI <p className='text-black'>TRAGE</p>
         </div>
       </div>

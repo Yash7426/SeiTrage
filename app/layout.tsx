@@ -35,6 +35,17 @@ const marvinVisionsBig = localFont({
   variable: "--font-marvin", // creates a CSS variable for the font
 });
 
+const orborn = localFont({
+  src: [
+    {
+      path: "../public/fonts/Orborn.woff",
+      weight: "400", // adjust if you have other weights
+      style: "normal",
+    },
+  ],
+  variable: "--font-orborn", // creates a CSS variable for the font
+});
+
 const bebasNeue = localFont({
   src: [
     {
@@ -170,6 +181,7 @@ export default async function RootLayout({
       lang="en"
       className={`
                   ${marvinVisionsBig.variable} 
+                  ${orborn.variable}
                   ${montserrat.variable} 
                   ${montRegular.variable}
                   ${montItalic.variable}

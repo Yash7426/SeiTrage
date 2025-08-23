@@ -12,9 +12,15 @@ const Big: React.FC<BigProps> = ({ scrollYProgress }) => {
   return (
     <motion.div
       // style={{ scale, rotate }}
+      style={{
+        backgroundImage: "url('/images/fade_logo.svg')",
+        backgroundSize: "40%",
+        backgroundPosition: "0 60%",
+        backgroundRepeat: "no-repeat",
+      }}
       className="h-[120vh] bg-[#111111] text-white text-[90px] leading-[110px] flex font-montBold justify-center text-center items-center"
     >
-      <h1 className="w-[50%]">
+      <h1 className="w-[50%] text-left">
         THE FUTURE BELONGS TO THOSE WHO PREDICT IT{" "}
         <span className="text-[#9E1F19]">FIRST.</span>
       </h1>

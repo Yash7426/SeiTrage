@@ -13,10 +13,10 @@ const Team: React.FC<TeamProps> = ({ scrollYProgress }) => {
     <motion.div
       // style={{ scale, rotate }}
       
-      className="h-[100vh] bg-white flex flex-col gap-[15vh] py-[10vh] px-[10vh]"
+      className="h-[100vh] bg-white flex flex-col gap-[12vh] py-[10vh] px-[10vh]"
     >
       <div className='flex flex-row justify-between'>
-        <div className="font-montBold text-[70px]">TEAM MEMBERS</div>
+        <div className="font-orborn text-[70px]">TEAM MEMBERS</div>
         <Image src="/images/seitrage_logo.svg" alt="sei" width={50} height={50} />
       </div>
       

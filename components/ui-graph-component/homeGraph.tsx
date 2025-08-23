@@ -434,7 +434,7 @@ function Flow({ strength = -500, distance = 150 }: ExampleProps = {}) {
     [setEdges]
   );
   return (
-    <div className="h-full mx-auto border ">
+    <div className="h-[90%] w-[90%] mx-auto border ">
       <ReactFlow
         nodes={nodes}
         edges={edges}

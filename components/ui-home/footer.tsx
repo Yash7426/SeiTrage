@@ -14,16 +14,16 @@ const Footer: React.FC<FooterProps> = ({ scrollYProgress }) => {
     <motion.div
       // style={{ scale, rotate }}
       
-      className="h-[100vh] text-[150px] flex justify-evenly flex-col items-center font-montBold text-[#9E1F19]"
+      className="h-[100vh] text-[150px] flex justify-evenly flex-col items-center font-orborn text-[#000000] p-5"
     >
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center gap-2">
         <Image
-          src={"/images/seitrage_logo_black_grain.svg"}
+          src={"/images/seitrage_logo.svg"}
           alt="."
           width={300}
           height={300}
         />
-        <div className="flex flex-row leading-[150px]">SEI <p className="text-black leading-[150px]">TRAGE</p></div>
+        <div className="flex flex-row">SEI <p className="text-black">TRAGE</p></div>
       </div>
       <div className="font-montLight text-[14px] align-baseline text-black">@SEITRAGE 2025</div>
     </motion.div>

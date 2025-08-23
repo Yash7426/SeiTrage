@@ -16,6 +16,7 @@ const config: Config = {
       fontFamily: {
         // Create a custom font family called 'marvin' using the CSS variable
         marvin: ['var(--font-marvin)', 'sans-serif'],
+        orborn: ['var(--font-orborn)', 'sans-serif'],
         bebas: ['var(--font-bebas)', 'sans-serif'],
         montRegular: ['var(--font-montRegular)', 'sans-serif'],
         montItalic: ['var(--font-montItalic)', 'sans-serif'],

@@ -123,7 +123,7 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
 
   return (
-    <motion.div className="sticky top-[-70px] w-full bg-white">
+    <motion.div className="w-full bg-white">
       {children}
     </motion.div>
   );

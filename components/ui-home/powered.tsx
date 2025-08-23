@@ -16,14 +16,12 @@ const Powered: React.FC<PoweredProps> = ({ scrollYProgress }) => {
 
   return (
     <motion.div
-      style={{ scale }}
-      
-      className="h-[35vh] bg-white flex flex-col gap-10"
+      className="h-[35vh] bg-white flex flex-col justify-center gap-10 mb-[60px]"
     >
-      <div className="font-montMedium text-[30px] text-black text-center">
+      <div className="font-orborn text-[30px] text-black text-center">
         POWERED BY
       </div>
-      <InfiniteMovingCards items={items} />
+      <InfiniteMovingCards items={items} pauseOnHover={false} />
     </motion.div>
   );
 };
