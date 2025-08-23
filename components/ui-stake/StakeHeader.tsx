@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MoveRight } from "lucide-react";
 import StakeCard from "./stake-token";
 import { ethers, BrowserProvider, Contract } from "ethers";
@@ -7,15 +7,22 @@ import { abi, address } from "@/contracts_abi/Staking.json";
 import { toast } from "sonner";
 import { abi1, address1 } from "@/contracts_abi/Staking1.json";
 
+const STAKE_CHAIN_ID = 1328; // ✅ Sei Testnet chainId
+
 const StakeHeader: React.FC = () => {
-  // TODO: Add staking Tokens
-  const stakeTokens : any[] = [
-    // {
-    //   icon: "",
-    //   name: "",
-    //   symbol: "",
-    //   change: "",
-    // }
+  const stakeTokens = [
+    {
+      icon: "https://assets.coingecko.com/coins/images/38591/standard/iSEI_logo_200_200.png?1718091709",
+      name: "Silo",
+      symbol: "iSEI",
+      change: "+18.1%",
+    },
+    {
+      icon: "https://assets.coingecko.com/coins/images/31252/standard/Kryptonite_PFP-03.png?1696530076",
+      name: "Kryptonite",
+      symbol: "stSEI",
+      change: "+48.4%",
+    }
   ];
 
   const [selectedToken, setSelectedToken] = useState<string | null>(null);
@@ -33,37 +40,106 @@ const StakeHeader: React.FC = () => {
     });
   }
 
-  // TODO : dummy staking function
-  // async function enter() {
-  //   try {
-  //     if (window.ethereum) {
-  //       const provider = new BrowserProvider(window.ethereum);
-  //       await provider.send("eth_requestAccounts", []);
-  //       const signer = await provider.getSigner();
-  //       const contract = new Contract(address, abi, signer);
+  async function ensureSeiChain(provider: BrowserProvider) {
+    const network = await provider.getNetwork();
+    console.log("Connected to chain:", network.chainId.toString());
 
-  //       const toastId = toast.loading("Staking in progress...");
-        
-  //       const transactionResponse = await contract.stake({
-  //         value: ethers.parseEther(amount),
-  //       });
+    if (Number(network.chainId) !== STAKE_CHAIN_ID) {
+      try {
+        await window.ethereum.request({
+          method: "wallet_switchEthereumChain",
+          params: [{ chainId: "0x530" }], 
+        });
+        toast.success("Switched to Sei Testnet");
+      } catch (switchError: any) {
+        if (switchError.code === 4902) {
+          await window.ethereum.request({
+            method: "wallet_addEthereumChain",
+            params: [
+              {
+                chainId: "0x530",
+                chainName: "Sei Testnet",
+                rpcUrls: ["https://evm-rpc-testnet.sei-apis.com"],
+                nativeCurrency: {
+                  name: "Sei",
+                  symbol: "SEI",
+                  decimals: 18, 
+                },
+                blockExplorerUrls: ["https://testnet.seiscan.app"],
+              },
+            ],
+          });
+        } else {
+          throw switchError;
+        }
+      }
+    }
+  }
 
-  //       await listenForTransactionMined(transactionResponse, provider);
-        
-  //       toast.success("Successfully staked token.", { id: toastId });
-  //       setAmount("0");
-  //       setSelectedToken(null);
-  //     }
-  //   } catch (e) {
-  //     console.error(e);
-  //     toast.error("Staking failed.");
-  //   }
-  // }
+  async function enter() {
+    try {
+      console.log("hello1")
+      if (window.ethereum) {
+        console.log("hello")
+        const provider = new BrowserProvider(window.ethereum);
+        await provider.send("eth_requestAccounts", []);
+        await ensureSeiChain(provider); // ✅ check chain
+
+        const signer = await provider.getSigner();
+        const contract = new Contract(address, abi, signer);
+
+        const toastId = toast.loading("Staking in progress...");
+        const transactionResponse = await contract.stake({
+          value: ethers.parseEther(amount) 
+        });
+
+        await listenForTransactionMined(transactionResponse, provider);
+
+        toast.success("Successfully staked token.", { id: toastId });
+        setAmount("0");
+        setSelectedToken(null);
+      }
+    } catch (e) {
+      console.error(e);
+      toast.error("Staking failed.");
+    }
+  }
+
+  async function enter1() {
+    try {
+      if (window.ethereum) {
+        const provider = new BrowserProvider(window.ethereum);
+        await provider.send("eth_requestAccounts", []);
+        await ensureSeiChain(provider); // ✅ check chain
+
+        const signer = await provider.getSigner();
+        const contract = new Contract(address1, abi1, signer);
+
+        const toastId = toast.loading("Staking in progress...");
+        const transactionResponse = await contract.stake({
+          value: ethers.parseUnits(amount, 6),
+        });
+
+        await listenForTransactionMined(transactionResponse, provider);
+
+        toast.success("Successfully staked token.", { id: toastId });
+        setAmount("0");
+        setSelectedToken(null);
+      }
+    } catch (e) {
+      console.error(e);
+      toast.error("Staking failed.");
+    }
+  }
 
   const handleStake = () => {
     if (selectedToken && amount) {
-      // TODO : implement staking feature
-    } 
+      if (selectedToken === "Beets Staked Sonic") {
+        enter();
+      } else if (selectedToken === "Origin Sonic") {
+        enter1();
+      }
+    }
   };
 
   return (
