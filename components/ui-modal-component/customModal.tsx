@@ -2,7 +2,6 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
 import Home from "./DeBridgeWidget";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 type CustomModalProps = {
   isOpen: boolean;
@@ -28,25 +27,25 @@ const CustomModal: React.FC<CustomModalProps> = ({
         return (
           <iframe
             src={"https://app.uniswap.org/#/swap"}
-            className="w-full h-full border-none rounded-md"
+            className="size-full border-none rounded-md"
             allowFullScreen
-          ></iframe>
+          />
         );
       case "raydium":
         return (
           <iframe
             src={"https://raydium.io/swap/"}
-            className="w-full h-full border-none rounded-md"
+            className="size-full border-none rounded-md"
             allowFullScreen
-          ></iframe>
+          />
         );
       default:
         return (
           <iframe
             src={"https://pancakeswap.finance/swap"}
-            className="w-full h-full border-none rounded-md"
+            className="size-full border-none rounded-md"
             allowFullScreen
-          ></iframe>
+          />
         );
     }
   };
@@ -55,7 +54,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
     <Dialog.Root open={isOpen} onOpenChange={onClose}>
       <Dialog.Portal>
         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50"/>
-        <Dialog.Content className="fixed h-[90vh] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-[90%] z-50 min-w-md">
+        <Dialog.Content className="fixed h-[90vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-[90%] z-50 min-w-md">
           <Dialog.Title className="text-lg font-bold mb-2 text-gray-800">
             {action}
           </Dialog.Title>
@@ -64,7 +63,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
               <X size={24} />
             </button>
           </Dialog.Close>
-          <div className="h-[100%] ">{renderWidget()}</div>
+          <div className="h-full ">{renderWidget()}</div>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>

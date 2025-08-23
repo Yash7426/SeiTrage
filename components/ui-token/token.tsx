@@ -19,7 +19,7 @@ const TokenCard: React.FC<TokenCardProps> = ({ name, logo, price, volume }) => {
       onClick={() => {
         handleModalOpen();
       }}
-      className="cursor-pointer rounded-lg border-[1px] border-[#E4E4E4]"
+      className="cursor-pointer rounded-lg border border-[#E4E4E4]"
     >
       <TokenModal
         coin={name}
@@ -33,7 +33,7 @@ const TokenCard: React.FC<TokenCardProps> = ({ name, logo, price, volume }) => {
           alt={name}
           width={100}
           height={100}
-          className="rounded-full h-8 w-8"
+          className="rounded-full size-8"
         />
 
         <div className="flex flex-col justify-center gap-y-[2px] w-full">

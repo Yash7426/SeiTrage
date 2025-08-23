@@ -22,7 +22,7 @@ const Features: React.FC<FeaturesProps> = ({ scrollYProgress }) => {
     <motion.div
       ref={ref}
       // style={{ rotate }}
-      className="h-[100vh] bg-white flex flex-col py-[8vh] px-[5vw] gap-[12vh]"
+      className="h-screen bg-white flex flex-col py-[8vh] px-[5vw] gap-[12vh]"
     >
       <div className="flex flex-row justify-between">
         <div className="font-marvin text-[30px] flex flex-row items-center gap-2">

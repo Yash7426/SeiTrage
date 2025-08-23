@@ -25,14 +25,14 @@ const TokenModal: React.FC<CustomModalProps> = ({
     <Dialog.Root open={isOpen} onOpenChange={onClose}>
       <Dialog.Portal>
         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50" />
-        <Dialog.Content className="outline-none fixed h-[38vh] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg w-[500px] max-w-[90%] z-50">
+        <Dialog.Content className="outline-none fixed h-[38vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg w-[500px] max-w-[90%] z-50">
           <Dialog.Title className=" flex items-center justify-center gap-x-4 font-bold mb-2 text-gray-800">
             <Image
               src={logo}
               alt={coin}
               width={100}
               height={100}
-              className="rounded-full h-8 w-8 md:h-16 md:w-16"
+              className="rounded-full size-8 md:size-16"
             />
             <span className="font-bold text-4xl font-marvin">{coin}</span>
           </Dialog.Title>
@@ -49,7 +49,7 @@ const TokenModal: React.FC<CustomModalProps> = ({
             />
             <Button
               onClick={() => {
-                if(time !="" && toNumber(time)>0)
+                if(time !=="" && toNumber(time)>0)
                     router.push(`/token/${coin}?t=${time}`)
               }}
               className="bg-[#9E1F19] cursor-pointer mt-6 w-[50%] rounded-md py-2 font-bold hover:bg-[#a23c36]"

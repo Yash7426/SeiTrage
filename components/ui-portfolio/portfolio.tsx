@@ -8,12 +8,12 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
   swaps,
 }) => {
   return (
-    <div className="w-[100%] mx-auto my-4 rounded-lg  ">
+    <div className="w-full mx-auto my-4 rounded-lg  ">
       {/* User Info */}
       <h2 className="text-xl font-marvin">PORTFOLIO</h2>
       <hr className="border-[#E4E4E4] w-[90%]" />
       <div className="flex items-center gap-4 p-4 border border-gray-200 rounded-lg my-6">
-        <div className="w-6 h-6 md:h-12 md:w-12 bg-black rounded-full" />
+        <div className="size-6 md:size-12 bg-black rounded-full" />
         <div className="w-[90%]">
           <p className="font-mono text-sm font-bold truncate overflow-hidden whitespace-nowrap">{walletId}</p>
           <p className="text-[#2D2D2D] text-xs">Joined on {joinedDate}</p>
@@ -22,13 +22,13 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
 
       {/* Tokens */}
       <div className="mt-4 border border-gray-200 rounded-lg p-4">
-        <h3 className="font-semibold flex items-center gap-2 border-b-[1px] pb-2 border-[#E4E4E4]">
+        <h3 className="font-semibold flex items-center gap-2 border-b pb-2 border-[#E4E4E4]">
           <Image
             src={"/images/poker_chip.svg"}
             alt="token"
             width={100}
             height={100}
-            className="h-6 w-6 rounded-full"
+            className="size-6 rounded-full"
           />
           Tokens{" "}
           <span className="ml-auto font-bold">
@@ -47,7 +47,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
                   alt={token.name}
                   width={28}
                   height={28}
-                  className="h-4 w-4 md:h-8 md:w-8"
+                  className="size-4 md:size-8"
                 />
                 <span>{token.name}</span>
               </div>
@@ -64,13 +64,13 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
 
       {/* Transactions */}
       <div className="mt-4 border border-gray-200 rounded-lg p-4">
-        <h3 className="font-semibold flex items-center gap-2 border-b-[1px] pb-2 border-[#E4E4E4]">
+        <h3 className="font-semibold flex items-center gap-2 border-b pb-2 border-[#E4E4E4]">
           <Image
             src={"/images/transac.svg"}
             alt="token"
             width={100}
             height={100}
-            className="h-6 w-6 rounded-full"
+            className="size-6 rounded-full"
           />
           Transactions
         </h3>
@@ -89,11 +89,11 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
                   alt={tx.token.name}
                   width={28}
                   height={28}
-                  className="h-4 w-4 md:h-8 md:w-8"
+                  className="size-4 md:size-8"
                 />
                 <span className="font-bold">{tx.token.name}</span>
               </div>
-              <div className="flex justify-around w-[90%] md:w-[70%] xl:w-[60%] text-xs md:text-sm">
+              <div className="flex justify-around w-[90%] md:w-[70%] xl:w-3/5 text-xs md:text-sm">
                 <p className="">{tx.type}</p>
                 <p className="">{tx.token.amount} Tokens</p>
                 <p className="">${tx.token.value.toFixed(2)}</p>
@@ -109,7 +109,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
             alt="token"
             width={100}
             height={100}
-            className="h-6 w-6 rounded-full"
+            className="size-6 rounded-full"
           />{" "}
           Swap
         </h3>
@@ -117,7 +117,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
           {swaps.map((swap, index) => (
             <div
               key={index}
-              className="flex border-[1px] border-[#D4D4D4] flex-col items-center bg-[#EFEFEF] rounded-lg px-4 py-2 w-full"
+              className="flex border border-[#D4D4D4] flex-col items-center bg-[#EFEFEF] rounded-lg px-4 py-2 w-full"
             >
               <div className="flex justify-between items-center w-full">
                 <div className="flex justify-center items-center gap-2">
@@ -126,7 +126,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
                     alt={swap.fromToken.name}
                     width={32}
                     height={32}
-                    className="h-6 w-6 md:h-8 md:w-8 rounded-full"
+                    className="size-6 md:size-8 rounded-full"
                   />
                   <div>
                     <p className="text-sm font-bold">{swap.fromToken.name}</p>
@@ -143,7 +143,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
                   alt="token"
                   width={100}
                   height={100}
-                  className="h-6 w-6 rounded-full"
+                  className="size-6 rounded-full"
                 />
                 <div className="flex items-center gap-2">
                   <Image
@@ -151,7 +151,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
                     alt={swap.toToken.name}
                     width={32}
                     height={32}
-                    className="h-6 w-6 md:h-8 md:w-8 rounded-full"
+                    className="size-6 md:size-8 rounded-full"
                   />
                   <div>
                     <p className="text-sm font-bold">{swap.toToken.name}</p>

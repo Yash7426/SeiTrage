@@ -29,7 +29,7 @@ const TokenDetails = ({
             alt={name}
             width={100}
             height={100}
-            className="w-4 h-4 md:w-10 md:h-10 rounded-full"
+            className="size-4 md:size-10 rounded-full"
           />
           <span className="text-md md:text-2xl font-marvin">
             {name.toUpperCase()}
@@ -107,7 +107,7 @@ const TokenDetails = ({
               </div>
 
               {isOpen && (
-                <div className="absolute right-0 z-[50] w-32 bg-white border rounded-lg shadow-md">
+                <div className="absolute right-0 z-50 w-32 bg-white border rounded-lg shadow-md">
                   <button
                     onClick={() => {
                       setSelectedTime("10min");

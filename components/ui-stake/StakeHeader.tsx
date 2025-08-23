@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState, } from "react";
 import { MoveRight } from "lucide-react";
 import StakeCard from "./stake-token";
 import { ethers, BrowserProvider, Contract } from "ethers";
@@ -153,7 +153,7 @@ const StakeHeader: React.FC = () => {
           placeholder="Search Tokens"
           className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-[#ffffff] focus:border-[#9E1F19]"
         />
-        <MoveRight color="white" className="absolute top-0 bottom-0 w-8 h-8 my-auto text-gray-400 right-4 border bg-[#9E1F19] rounded-full p-1" />
+        <MoveRight color="white" className="absolute inset-y-0 size-8 my-auto text-gray-400 right-4 border bg-[#9E1F19] rounded-full p-1" />
       </div>
       <h2 className="text-xl my-8 font-bold text-[#2D2D2D]">Tokens</h2>
       <input

@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname , useRouter } from "next/navigation";
 
 import { useWindowSize } from "usehooks-ts";
 
@@ -30,7 +30,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useRouter } from "next/navigation";
 import type { User as UserType } from "next-auth";
 import { SidebarHistory } from "@/components/sidebar-history";
 
@@ -94,7 +93,7 @@ export function NavMain({
               }`}
             >
               {" "}
-              <MessageSquare className="w-4 h-4" />
+              <MessageSquare className="size-4" />
               <span className="flex items-center">
                 Chats
                 <Tooltip>
@@ -133,7 +132,7 @@ export function NavMain({
         }`}
       >
         <span className={`flex gap-x-2 items-center`}>
-        <CircleDot className="w-4 h-4" />
+        <CircleDot className="size-4" />
           Token
         </span>
       </div>
@@ -148,7 +147,7 @@ export function NavMain({
         }`}
       >
         <span className={`flex gap-x-2 items-center`}>
-          <ChartCandlestick className="w-4 h-4" />
+          <ChartCandlestick className="size-4" />
           Stake
         </span>
       </div>
@@ -163,7 +162,7 @@ export function NavMain({
         }`}
       >
         <span className={`flex gap-x-2 items-center`}>
-          <User className="w-4 h-4" />
+          <User className="size-4" />
           Account
         </span>
       </div>
@@ -178,7 +177,7 @@ export function NavMain({
         }`}
       >
         <span className={`flex gap-x-2 items-center`}>
-          <ChartPie className="w-4 h-4" />
+          <ChartPie className="size-4" />
           Portfolio
         </span>
       </div>

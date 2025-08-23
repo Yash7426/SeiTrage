@@ -1,7 +1,6 @@
 import React from "react";
 import Butn from "./butn";
 import { useTransform, type MotionValue, motion } from "framer-motion";
-import Login from "../ui-login/login";
 
 interface CtaProps {
   scrollYProgress: MotionValue<number>;

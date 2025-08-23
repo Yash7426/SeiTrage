@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Lenis from "lenis";
 import Powered from "@/components/ui-home/powered";

@@ -90,7 +90,7 @@ const Page = () => {
       try {
         const val1 = getTenMinPrediction(id.toLowerCase());
         const val2 = getOneDayPrediction(id.toLowerCase());
-        if (val1 == 0 || val2 == 0) return;
+        if (val1 === 0 || val2 === 0) return;
 
         const response10min = await fetch(
           `https://allora-api.testnet.allora.network/emissions/v7/latest_network_inferences/${val1}`
@@ -125,9 +125,9 @@ const Page = () => {
   const [score,setScore] = useState<number>(0);
 
   function getDex(dex:string){
-    if(dex=="dex_1") return "Uniswap";
-    if(dex=="dex_2") return "Raydium";
-    if(dex=="dex_3") return "PancakeSwap";
+    if(dex==="dex_1") return "Uniswap";
+    if(dex==="dex_2") return "Raydium";
+    if(dex==="dex_3") return "PancakeSwap";
     return "Uniswap";
   }
 
@@ -185,7 +185,7 @@ const Page = () => {
   if (loading  || loading2)
     return (
       <div className="flex flex-col space-y-3 h-[50vh] w-[50%] items-center justify-center mx-auto">
-        <Skeleton className="h-full w-full rounded-xl" />
+        <Skeleton className="size-full rounded-xl" />
         <div className="space-y-2 w-full">
           <Skeleton className="h-4 w-full" />
           <Skeleton className="h-4 w-full" />

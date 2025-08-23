@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { MessageIcon, VercelIcon } from "./icons";
 import Image from "next/image";
 
 export const Overview = () => {

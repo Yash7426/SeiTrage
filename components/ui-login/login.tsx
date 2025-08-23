@@ -70,7 +70,7 @@ async function onSignInWithMetaMask() {
 
     if (!response.ok) {
       const text = await response.text();
-      throw new Error("Failed to fetch nonce: " + text);
+      throw new Error(`Failed to fetch nonce: ${text}`);
     }
 
     const { nonce } = await response.json();

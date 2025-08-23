@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({ scrollYProgress }) => {
     <motion.div
       // style={{ scale, rotate }}
       
-      className="h-[100vh] text-[150px] flex justify-evenly flex-col items-center font-orborn text-[#000000] p-5"
+      className="h-screen text-[150px] flex justify-evenly flex-col items-center font-orborn text-[#000000] p-5"
     >
       <div className="flex flex-col items-center gap-2">
         <Image

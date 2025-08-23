@@ -1,7 +1,5 @@
 "use client"
 import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 const cryptoIcons = [
   '/images/bitcoin-btc-logo.svg',
@@ -30,7 +28,7 @@ const getFloatingAnimation = (index:number) => {
     rotate: [0, Math.random() * (3 + index), -Math.random() * (3 + index), 0],
     transition: {
       duration: 3,
-      repeat: Infinity,
+      repeat: Number.POSITIVE_INFINITY,
       ease: "easeInOut"
     }
   };
@@ -53,7 +51,7 @@ const LandingSec = () => {
         </div>
       </div>
       <div className='flex flex-col items-center justify-center gap-3'>
-        <p className='w-[40%] text-center font-montRegular'>
+        <p className='w-2/5 text-center font-montRegular'>
           Harness the power of AI-driven predictions and blockchain efficiency to capture profitable arbitrage opportunities
         </p>
         <h1 onClick={()=>{

@@ -19,7 +19,7 @@ const ShowTransfer: React.FC<ShowTransferProps> = ({
   hash
 }) => {
   return (
-    <div className="flex rounded-lg border-[1px] border-[#9E1F19] px-4 py-3 w-full">
+    <div className="flex rounded-lg border border-[#9E1F19] px-4 py-3 w-full">
       <div className="flex justify-between items-center w-full">
         {/* Sender */}
         <div className="flex items-center gap-2">
@@ -28,7 +28,7 @@ const ShowTransfer: React.FC<ShowTransferProps> = ({
             alt={network}
             width={32}
             height={32}
-            className="h-8 w-8 rounded-full"
+            className="size-8 rounded-full"
           />
           <div>
             <p className="text-sm font-bold text-gray-900 truncate max-w-[250px]">
@@ -45,7 +45,7 @@ const ShowTransfer: React.FC<ShowTransferProps> = ({
             alt="transfer"
             width={24}
             height={24}
-            className="h-6 w-6 opacity-80"
+            className="size-6 opacity-80"
           />
           <p className="text-sm font-bold">{amount} SEI</p>
         </div>
@@ -57,7 +57,7 @@ const ShowTransfer: React.FC<ShowTransferProps> = ({
             alt={network}
             width={32}
             height={32}
-            className="h-8 w-8 rounded-full"
+            className="size-8 rounded-full"
           />
           <div>
             <p className="text-sm font-bold text-gray-900 truncate max-w-[250px]">

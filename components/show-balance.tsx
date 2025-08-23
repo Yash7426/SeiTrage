@@ -13,7 +13,7 @@ address,balance,network
 }) => {
   return (
     <div
-      className="rounded-lg border-[1px] border-[#9E1F19]"
+      className="rounded-lg border border-[#9E1F19]"
     >
       <div className="flex px-4 py-2 items-center gap-2">
         <Image
@@ -21,7 +21,7 @@ address,balance,network
           alt={network}
           width={100}
           height={100}
-          className="rounded-full h-8 w-8"
+          className="rounded-full size-8"
         />
         <div className="w-full flex justify-between items-center">
           <div className="flex flex-col justify-center gap-y-[2px] w-full">

@@ -129,7 +129,7 @@ export default function Home() {
   const chainIdHex: string = await window.ethereum.request({
     method: "eth_chainId",
   });
-  const chainId = parseInt(chainIdHex, 16);
+  const chainId = Number.parseInt(chainIdHex, 16);
 
   const chain = SUPPORTED_CHAINS[chainId];
   if (!chain) {

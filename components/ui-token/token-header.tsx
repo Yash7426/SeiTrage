@@ -84,7 +84,7 @@ const TokenHeader: React.FC = () => {
         console.log(trendingCoins);
 
         const coinDataPromises = trendingCoins.map(async (coin: string) => {
-          if(coin.toLowerCase()=="sei") coin="sei-network"
+          if(coin.toLowerCase()==="sei") coin="sei-network"
           const coingeckoResponse = await fetch(
             `https://api.coingecko.com/api/v3/coins/${coin.toLowerCase()}`
           );
@@ -111,7 +111,7 @@ const TokenHeader: React.FC = () => {
   if (loading)
     return (
       <div className="flex flex-col space-y-3 h-[50vh] w-[50%] items-center justify-center mx-auto">
-        <Skeleton className="h-full w-full rounded-xl" />
+        <Skeleton className="size-full rounded-xl" />
         <div className="space-y-2 w-full">
           <Skeleton className="h-4 w-full" />
           <Skeleton className="h-4 w-full" />
@@ -126,7 +126,7 @@ const TokenHeader: React.FC = () => {
       <div className="relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute top-0 bottom-0 w-6 h-6 my-auto text-gray-400 left-3"
+          className="absolute inset-y-0 size-6 my-auto text-gray-400 left-3"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -145,7 +145,7 @@ const TokenHeader: React.FC = () => {
         />
         <MoveRight
           color="white"
-          className="absolute top-0 bottom-0 w-8 h-8 my-auto text-gray-400 right-4 border bg-[#9E1F19] rounded-full p-1"
+          className="absolute inset-y-0 size-8 my-auto text-gray-400 right-4 border bg-[#9E1F19] rounded-full p-1"
         />
       </div>
       <h2 className="text-xl my-8 font-bold text-[#2D2D2D]">Trending Tokens</h2>

@@ -25,7 +25,7 @@ const About: React.FC<AboutProps> = ({ scrollYProgress }) => {
           trading—eliminating middlemen and maximizing returns.
         </div>
       </div>
-      <div className="w-full h-full">
+      <div className="size-full">
         <FlowWithProvider />
       </div>
     </motion.div>

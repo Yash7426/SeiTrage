@@ -13,7 +13,7 @@ interface LatestTweetsProps {
 
 const LatestTweets = ({ query }: LatestTweetsProps) => {
 
-  if(query.toLowerCase()=="sei") query = "SeiNetwork";
+  if(query.toLowerCase()==="sei") query = "SeiNetwork";
 
   return (
     <>

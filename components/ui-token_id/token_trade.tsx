@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "../ui/button";
 import SelectDropdown from "./token_dexlist";
 import { DEFAULT_CHAT_MODEL } from "@/lib/ai/models";

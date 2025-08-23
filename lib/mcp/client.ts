@@ -1,10 +1,9 @@
 import { Client } from '@modelcontextprotocol/sdk/client';
 import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js';
-import {EventSource} from 'eventsource';
 import {
-  CallToolRequest,
+  type CallToolRequest,
   CallToolResultSchema,
-  ListToolsRequest,
+  type ListToolsRequest,
   ListToolsResultSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 

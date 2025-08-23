@@ -364,15 +364,15 @@ interface AgentNodeProps {
 }
 const AgentNode = ({ data }: AgentNodeProps) => {
   return (
-    <div className="p-2 h-32 w-32 shadow-lg rounded-full bg-[#a64944] dark:bg-neutral-800 border border-brand-600 dark:border-brand-600">
+    <div className="p-2 size-32 shadow-lg rounded-full bg-[#a64944] dark:bg-neutral-800 border border-brand-600 dark:border-brand-600">
       <Handle type="source" position={Position.Right} className="" />
-      <div className="flex flex-col items-center justify-center h-full w-full text-neutral-800 dark:text-white">
+      <div className="flex flex-col items-center justify-center size-full text-neutral-800 dark:text-white">
         <span className="text-sm font-semibold text-center text-white font-montRegular">{data.name}</span>
       </div>
       <Handle
         type="target"
         position={Position.Left}
-        className="w-3 h-3 bg-teal-500"
+        className="size-3 bg-teal-500"
       />
     </div>
   );
@@ -389,7 +389,7 @@ const CentralNode = ({ data }: CentralNodeProps) => {
       <Handle
         type="source"
         position={Position.Right}
-        className="w-3 h-3 bg-[#a34944]"
+        className="size-3 bg-[#a34944]"
       />
       <div className="flex items-center justify-center">{data.label}</div>
       <Handle type="target" position={Position.Left} />
@@ -434,7 +434,7 @@ function Flow({ strength = -500, distance = 150 }: ExampleProps = {}) {
     [setEdges]
   );
   return (
-    <div className="h-[90%] w-[90%] mx-auto border ">
+    <div className="size-[90%] mx-auto border ">
       <ReactFlow
         nodes={nodes}
         edges={edges}
