@@ -23,6 +23,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { MessageEditor } from './message-editor';
 import { DocumentPreview } from './document-preview';
 import { MessageReasoning } from './message-reasoning';
+import ShowBalance from './show-balance';
 
 const PurePreviewMessage = ({
   chatId,
@@ -147,7 +148,10 @@ const PurePreviewMessage = ({
                       <div key={toolCallId}>
                         {toolName === 'getWeather' ? (
                           <Weather weatherAtLocation={result} />
-                        ) : toolName === 'createDocument' ? (
+                        ) : toolName === 'getBalance' ? (
+                          <ShowBalance {...result} />
+                        )
+                        : toolName === 'createDocument' ? (
                           <DocumentPreview
                             isReadonly={isReadonly}
                             result={result}

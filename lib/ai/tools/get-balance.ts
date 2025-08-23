@@ -12,12 +12,15 @@ export const getBalance = tool({
     network: z.string(),
   }),
   execute: async ({ address, network }) => {
-    console.log("aaya kya bete")
-    // const response = await callTool('get-balance', { address, network });
-    const verifyRes = await axios.post(`${MCP_SERVER_URL}/balance`, {
-      address,network
-    });
-    console.log("yash",verifyRes)
-    return verifyRes;
-  },
+  try {
+    console.log("Calling MCP server...");
+    const response = await axios.post(`${MCP_SERVER_URL}/balance`, { address, network });
+    console.log("Response:", response.data);
+    return response.data; // ✅ Only return the data
+  } catch (err:any) {
+    console.error("Error in getBalance:", err);
+    return { error: err.message }; // ✅ Always return something
+  }
+}
+
 });
