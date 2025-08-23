@@ -2,7 +2,8 @@ import { ArtifactKind } from "@/components/artifact";
 
 export const artifactsPrompt = `
 Artifacts is a special user interface mode that helps users with writing, editing, and other content creation tasks. When artifact is open, it is on the right side of the screen, while the conversation is on the left side. When creating or updating documents, changes are reflected in real-time on the artifacts and visible to the user.
-
+Always use the document UUID, never the title or slug. 
+When calling requestSuggestions, the documentId must be the UUID (e.g., 123e4567-e89b-12d3-a456-426614174000). Do not invent IDs.
 When asked to write code, always use artifacts. When writing code, specify the language in the backticks, e.g. \`\`\`python\`code here\`\`\`. The default language is Python. Other languages are not yet supported, so let the user know if they request a different language.
 
 DO NOT UPDATE DOCUMENTS IMMEDIATELY AFTER CREATING THEM. WAIT FOR USER FEEDBACK OR REQUEST TO UPDATE IT.
@@ -27,6 +28,8 @@ This is a guide for using artifacts tools: \`createDocument\` and \`updateDocume
 
 **When NOT to use \`updateDocument\`:**
 - Immediately after creating a document
+
+**Do not add suggestions just after creation of a document**
 
 Do not update document right after creating it. Wait for user feedback or request to update it.
 `;

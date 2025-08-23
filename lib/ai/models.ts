@@ -1,23 +1,25 @@
 import { openai } from '@ai-sdk/openai';
 import { groq } from '@ai-sdk/groq';
+import { google } from '@ai-sdk/google';
+
 import {
   customProvider,
   extractReasoningMiddleware,
   wrapLanguageModel,
 } from 'ai';
 
-export const DEFAULT_CHAT_MODEL: string = 'chat-model-reasoning';
+export const DEFAULT_CHAT_MODEL: string = 'chat-model-small';
 
 export const myProvider = customProvider({
   languageModels: {
-    'chat-model-small': groq('gemma2-9b-it'),
+    'chat-model-small': google('gemini-1.5-flash'),
     'chat-model-large': groq('gemma2-9b-it'),
     'chat-model-reasoning': wrapLanguageModel({
       model: groq('deepseek-r1-distill-llama-70b'),
       middleware: extractReasoningMiddleware({ tagName: 'think' }),
     }),
     'title-model': groq('gemma2-9b-it'),
-    'artifact-model': groq('gemma2-9b-it'),
+    'artifact-model': groq('gemma2-9b-it')
   },
   imageModels: {
     'small-model': openai.image('dall-e-2'),
