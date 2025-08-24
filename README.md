@@ -4,7 +4,7 @@
 
 <div align="center">
   <p>
-    <a href="https://www.youtube.com/watch?v=yWLr_TDu4Pw&ab_channel=DarshBaxi">View Demo</a>
+    <a href="https://www.youtube.com/watch?v=s24MwuDz7e0&ab_channel=YashAgrawal">View Demo</a>
     .<a href="https://sei-trage.vercel.app/">Deployed Link</a>
     .
     <a href="https://sei-trage.vercel.app/"></a>
