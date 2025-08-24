@@ -10,15 +10,15 @@ const Page = () => {
     joinedDate: "26/01/2025",
     tokens: [
       { name: "ETHEREUM", logo: "/images/ethereum-eth-logo.png", amount: 2.3, value: 6337.18 },
-      { name: "Sei", logo: "/images/sei-logo.svg", amount: 25, value: 13.25 }
+      { name: "Sei", logo: "/images/sei-logo.svg", amount: 25, value: 7.875 }
     ],
     transactions: [
-      { type: "Bought" as const, token: { name: "SEI", logo: "/images/sei-logo.svg", amount: 25, value: 13.25 }, date: "5 february 2025" },
-      { type: "Sold" as const, token: { name: "BITCOIN", logo: "/images/bitcoin-logo.svg", amount: 1, value: 98275.95 }, date: "30 January 2025" }
+      { type: "Bought" as const, token: { name: "SEI", logo: "/images/sei-logo.svg", amount: 25, value: 13.25 }, date: "21 August 2025" },
+      { type: "Sold" as const, token: { name: "BITCOIN", logo: "/images/bitcoin-logo.svg", amount: 1, value: 98275.95 }, date: "16 August 2025" }
     ],
     swaps: [
-      { fromToken: { name: "BITCOIN", logo: "/images/bitcoin-logo.svg", amount: 0.064, value: 6337 }, toToken: { name: "ETHEREUM", logo: "/images/ethereum-eth-logo.png", amount: 2.3, value: 6337 }, date: "3  Feb 2025" },
-      { fromToken: { name: "DOGECOIN", logo: "/images/dogecoin-doge-logo.png", amount: 24672.32, value: 6338 }, toToken: { name: "BITCOIN", logo: "/images/bitcoin-logo.svg", amount: 0.064, value: 6338 }, date: "29 Jan 2025" }
+      { fromToken: { name: "BITCOIN", logo: "/images/bitcoin-logo.svg", amount: 0.064, value: 6337 }, toToken: { name: "ETHEREUM", logo: "/images/ethereum-eth-logo.png", amount: 2.3, value: 6337 }, date: "30  July 2025" },
+      { fromToken: { name: "DOGECOIN", logo: "/images/dogecoin-doge-logo.png", amount: 24672.32, value: 6338 }, toToken: { name: "BITCOIN", logo: "/images/bitcoin-logo.svg", amount: 0.064, value: 6338 }, date: "2 August 2025" }
     ]
   };
   return (
