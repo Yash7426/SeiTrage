@@ -4,7 +4,8 @@ import { upsertUserNonce } from '@/lib/db/queries';
 
 export async function POST(req: Request) {
   try {
-    const { publicAddress , ss } = await req.json();
+    const { publicAddress , seiBalance } = await req.json();
+    console.log(publicAddress, seiBalance)
     if (!publicAddress) {
       return NextResponse.json(
         { error: 'Public address is required' },
@@ -17,7 +18,7 @@ export async function POST(req: Request) {
 
     // Upsert the nonce into the user's record (create new user if necessary)
     await upsertUserNonce({
-      balance:ss,
+      balance:seiBalance,
       publicAddress,
       cryptoNonce: nonce,
       cryptoNonceExpires: expires.toISOString(),

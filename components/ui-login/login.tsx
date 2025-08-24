@@ -22,7 +22,7 @@ const SEI_TESTNET_RPC = "https://evm-rpc-testnet.sei-apis.com";
 async function getSeiTestnetBalance(address: string) {
   const seiProvider = new ethers.JsonRpcProvider(SEI_TESTNET_RPC);
   const balance = await seiProvider.getBalance(address);
-  return ethers.formatEther(balance);
+  return ethers.formatEther(balance).toString();
 }
 
 async function switchNetwork(targetChainId: number) {
