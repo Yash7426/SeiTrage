@@ -117,15 +117,15 @@ The AI-powered chat agent enables users to get quick responses and real-time inf
 
 ### 5. **Sei MCP Integration**  
 
-## a. Sei MCP Server
+#### a. Sei MCP Server
 •⁠  ⁠Provides blockchain services—including reading chain state (blocks, balances, transactions), interacting with smart contracts, transferring tokens (native, ERC20, ERC721, ERC1155), and accessing token metadata—through standardized MCP tools and resources.
 
-## b. MCP Client within Chat
+#### b. MCP Client within Chat
 •⁠  ⁠Captures natural-language input in the chat.  
 •⁠  ⁠Maps user intent to the correct MCP tools (e.g., ⁠ get-balance ⁠).  
 •⁠  ⁠Invokes these tools on the MCP server and returns formatted responses directly in the chat interface. 
 
-# Why It Matters
+##### Why It Matters
 •⁠  ⁠*Natural language control*: End users don’t need to understand blockchain APIs or write code.  
 •⁠  ⁠*AI-friendly integration*: Easily extended and discoverable by conversational AI assistants.
 
