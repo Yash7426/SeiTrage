@@ -2,7 +2,7 @@ import { tool } from 'ai';
 import { z } from 'zod';
 import axios from 'axios';
 
-export const MCP_SERVER_URL = "http://localhost:3001";
+export const MCP_SERVER_URL = "https://sei-mcp-server-t923.onrender.com";
 
 export const transferSei = tool({
   description: 'Transfer native SEI tokens to a given address on a specified network',
