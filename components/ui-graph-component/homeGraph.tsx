@@ -163,7 +163,7 @@ export const initialNodes: Node[] = [
     position: { x: 500, y: -200 },
     data: {
       icon: "Coins",
-      name: "Coin - 1",
+      name: "Silo",
     },
     className: styles.node,
     type: "agent",
@@ -173,7 +173,7 @@ export const initialNodes: Node[] = [
     position: { x: 500, y: -200 },
     data: {
       icon: "Coins",
-      name: "Coin - 2",
+      name: "Kryptonite",
     },
     className: styles.node,
     type: "agent",

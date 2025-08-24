@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { signIn, useSession } from "next-auth/react";
 import { ethers } from "ethers";
 
@@ -12,8 +12,18 @@ const SUPPORTED_NETWORKS: Record<number, { name: string; hex: string }> = {
   1: { name: "Ethereum Mainnet", hex: "0x1" },
   137: { name: "Polygon", hex: "0x89" },
   1329: { name: "Sei Mainnet", hex: "0x531" },
-  100000027: { name: "Sei Testnet", hex: "0x5F5E101" },
+  10000027: { name: "Sei Testnet", hex: "0x5F5E101" },
 };
+
+// 🚀 Sei Testnet RPC endpoint
+const SEI_TESTNET_RPC = "https://evm-rpc-testnet.sei-apis.com";
+
+// ✅ Fetch Sei Testnet balance (read-only)
+async function getSeiTestnetBalance(address: string) {
+  const seiProvider = new ethers.JsonRpcProvider(SEI_TESTNET_RPC);
+  const balance = await seiProvider.getBalance(address);
+  return ethers.formatEther(balance);
+}
 
 async function switchNetwork(targetChainId: number) {
   try {
@@ -39,17 +49,15 @@ async function onSignInWithMetaMask() {
       return;
     }
 
+    // connect via MetaMask (ETH / Polygon)
     const provider = new ethers.BrowserProvider(window.ethereum);
     const network = await provider.getNetwork();
     let chainId = Number(network.chainId);
 
-    // Auto switch if not in supported networks
+    // Auto switch if unsupported
     if (!SUPPORTED_NETWORKS[chainId]) {
-      // Default → Ethereum mainnet
-      const targetChainId = 1;
+      const targetChainId = 1; // default ETH
       await switchNetwork(targetChainId);
-
-      // Refresh provider + chainId after switch
       const newProvider = new ethers.BrowserProvider(window.ethereum);
       const newNetwork = await newProvider.getNetwork();
       chainId = Number(newNetwork.chainId);
@@ -59,13 +67,16 @@ async function onSignInWithMetaMask() {
 
     const signer = await provider.getSigner();
     const publicAddress = await signer.getAddress();
-    const balance = await provider.getBalance(publicAddress);
-    const ss = ethers.formatEther(balance).toString();
 
+    // ✅ fetch Sei Testnet balance
+    const seiBalance = await getSeiTestnetBalance(publicAddress);
+    console.log("Sei Testnet Balance:", seiBalance);
+
+    // send to backend
     const response = await fetch("/api/crypto", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ publicAddress, ss }),
+      body: JSON.stringify({ publicAddress, seiBalance }),
     });
 
     if (!response.ok) {
@@ -77,7 +88,7 @@ async function onSignInWithMetaMask() {
     const signedNonce = await signer.signMessage(nonce);
 
     await signIn("crypto", {
-      ss,
+      seiBalance,
       publicAddress,
       signedNonce,
       callbackUrl: "/chat",
