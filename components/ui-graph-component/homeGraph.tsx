@@ -136,7 +136,7 @@ export const initialNodes: Node[] = [
     className: styles.node,
     type: "agent",
   },
-  // news sentiment analyzer
+  // yield farming
   {
     id: "4",
     position: { x: 300, y: 0 },
@@ -147,7 +147,6 @@ export const initialNodes: Node[] = [
     className: styles.node,
     type: "agent",
   },
-  // news sentiment analyzer
   {
     id: "4.1",
     position: { x: 500, y: 200 },
@@ -178,7 +177,7 @@ export const initialNodes: Node[] = [
     className: styles.node,
     type: "agent",
   },
-  // news sentiment analyzer
+  // cross-chain
   {
     id: "5",
     position: { x: 0, y: -300 },
@@ -199,19 +198,20 @@ export const initialNodes: Node[] = [
     className: styles.node,
     type: "agent",
   },
+  // chat + llm
   {
     id: "6",
     position: { x: 200, y: -500 },
     data: {
       icon: "ChartLine",
-      name: "AI Chat agent",
+      name: "AI Chat Agent",
     },
     className: styles.node,
     type: "agent",
   },
   {
     id: "6.1",
-    position: { x: 200, y: -500 },
+    position: { x: 200, y: -700 },
     data: {
       icon: "ChartLine",
       name: "ZerePy LLM",
@@ -219,6 +219,38 @@ export const initialNodes: Node[] = [
     className: styles.node,
     type: "agent",
   },
+  // NEW: sei-mcp integration
+  {
+    id: "6.2",
+    position: { x: 400, y: -700 },
+    data: {
+      icon: "Cpu",
+      name: "Sei-MCP",
+    },
+    className: styles.node,
+    type: "agent",
+  },
+  {
+    id: "6.21",
+    position: { x: 600, y: -900 },
+    data: {
+      icon: "Wallet",
+      name: "get-balance",
+    },
+    className: styles.node,
+    type: "agent",
+  },
+  {
+    id: "6.22",
+    position: { x: 600, y: -500 },
+    data: {
+      icon: "Send",
+      name: "transfer-sei",
+    },
+    className: styles.node,
+    type: "agent",
+  },
+  // central node
   {
     id: "1",
     position: { x: 0, y: 0 },
@@ -236,21 +268,6 @@ export const initialEdges: Edge[] = [
     source: "1",
     target: "2",
   },
-  // {
-  //   id: "2->2.1",
-  //   source: "2",
-  //   target: "2.1",
-  // },
-  // {
-  //   id: "2->2.2",
-  //   source: "2",
-  //   target: "2.2",
-  // },
-  // {
-  //   id: "2->2.3",
-  //   source: "2",
-  //   target: "2.3",
-  // },
   {
     id: "2->2.11",
     source: "2",
@@ -356,7 +373,24 @@ export const initialEdges: Edge[] = [
     source: "6",
     target: "6.1",
   },
+  // NEW edges for sei-mcp
+  {
+    id: "6->6.2",
+    source: "6",
+    target: "6.2",
+  },
+  {
+    id: "6.2->6.21",
+    source: "6.2",
+    target: "6.21",
+  },
+  {
+    id: "6.2->6.22",
+    source: "6.2",
+    target: "6.22",
+  },
 ];
+
 interface AgentNodeProps {
   data: {
     name: string;
@@ -377,6 +411,7 @@ const AgentNode = ({ data }: AgentNodeProps) => {
     </div>
   );
 };
+
 interface CentralNodeProps {
   data: {
     label: string;
@@ -434,7 +469,7 @@ function Flow({ strength = -500, distance = 150 }: ExampleProps = {}) {
     [setEdges]
   );
   return (
-    <div className="size-[90%] mx-auto border ">
+    <div className="size-full mx-auto border ">
       <ReactFlow
         nodes={nodes}
         edges={edges}
