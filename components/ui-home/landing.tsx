@@ -2,6 +2,7 @@ import React from "react";
 import HomeNav from "./homeNav";
 import LandingSec from "./landingSec";
 import { useTransform, motion, type MotionValue } from "framer-motion";
+import VantaBackground from "../vanta-background";
 
 interface LandingProps {
   scrollYProgress: MotionValue<number>;
@@ -15,7 +16,9 @@ const Landing: React.FC<LandingProps> = ({ scrollYProgress }) => {
     <motion.div
       // style={{ scale, rotate }}
       className="sticky top-0 bg-white h-screen flex flex-col gap-[20vh]"
+      // className="sticky top-0 h-screen flex flex-col"
     >
+      <VantaBackground />
       <HomeNav />
       <LandingSec />
     </motion.div>
