@@ -55,6 +55,7 @@ function cleanTokenParam(param: string): string {
 }
 
 const Page = () => {
+  const apiKey = process.env.NEXT_PUBLIC_ALLORA_API_KEY;
   let { id }: { id: string } = useParams();
   const [loading, setLoading] = useState(true);
   const [loading2, setLoading2] = useState(true);
@@ -91,15 +92,11 @@ const Page = () => {
         const val1 = getTenMinPrediction(id.toLowerCase());
         const val2 = getOneDayPrediction(id.toLowerCase());
         if (val1 === 0 || val2 === 0) return;
-
-        const response10min = await fetch(
-          `https://allora-api.testnet.allora.network/emissions/v7/latest_network_inferences/${val1}`
-        );
+        const response10min = await fetch(`/api/allora?val=${val1}`);
         const data10min = await response10min.json();
 
-        const response24h = await fetch(
-          `https://allora-api.testnet.allora.network/emissions/v7/latest_network_inferences/${val2}`
-        );
+        const response24h = await fetch(`/api/allora?val=${val2}`);
+        
         const data24h = await response24h.json();
 
         setPredictions({
