@@ -229,7 +229,7 @@ The following individuals have contributed to this project:
 Explore the core components of **SeiTrage** on GitHub:  
 
 - [Machine Learning Algorithms](https://github.com/darshbaxi/Seitrage-AI) 
-- [Blockchain Backend](https://github.com/Yash9276/web3-SuperSonic-Backend)  
+- [Blockchain Backend](https://github.com/Yash9276/SeiTrage-Blockchain)  
 - [MCP](https://github.com/Yash7426/sei-mcp-server)
 
 These repositories contain the AI-driven arbitrage models, smart contract implementations, and backend infrastructure powering **SeiTrage**. 🚀
