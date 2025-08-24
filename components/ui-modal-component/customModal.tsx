@@ -54,7 +54,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
     <Dialog.Root open={isOpen} onOpenChange={onClose}>
       <Dialog.Portal>
         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50"/>
-        <Dialog.Content className="fixed h-[90vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-[90%] z-50 min-w-md">
+        <Dialog.Content className="overflow-y-scroll fixed h-[90vh] w-[60vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-[90%] z-50">
           <Dialog.Title className="text-lg font-bold mb-2 text-gray-800">
             {action}
           </Dialog.Title>
@@ -63,7 +63,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
               <X size={24} />
             </button>
           </Dialog.Close>
-          <div className="h-full ">{renderWidget()}</div>
+          <div className="h-full w-full overflow-y-scroll">{renderWidget()}</div>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>

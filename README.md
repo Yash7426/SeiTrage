@@ -30,11 +30,13 @@
 
 Seitrage is an **AI-powered cross-DEX arbitrage and analytics platform** built natively on the **Sei blockchain**. It combines a real-time **AI chat agent**, personalized **trending token insights**, and **Twitter/X sentiment analysis** with **on-chain DEX performance** to forecast high-potential opportunities. By leveraging **historical liquidity and volume data** alongside **social sentiment** and **short-term price predictions**, Seitrage refines arbitrage strategies and enables traders to act before spreads close. The platform introduces several **Sei-first enhancements**, including **Sei MCP integration** for AI-driven wallet actions such as **balance checks** and **SEI transfers**, **deBridge Widget integration** via **goat-sdk** for seamless **bridging and predictive forecasts**, and updated **liquid staking** support for **Silo (iSEI)** and **Kryptonite (stSEI)** to maximize yield while maintaining liquidity.
 
+<img src="public/images/Screenshot 2025-08-24 at 11.10.16 PM.png" alt="" width="828px">
+
 # SeiTrage Architecture
 
 Seitrage is an AI-driven multi-DEX arbitrage platform optimized for Sei’s high-speed environment. Its data layer aggregates prices, order books, liquidity, oracle feeds, and social sentiment from Twitter/X and other sources. On top of this, the arbitrage engine applies predictive analytics and anomaly detection to identify short-lived pricing gaps, while the execution layer leverages Sei’s low latency for fast, capital-efficient trades. Cross-chain opportunities are enabled through deBridge, and idle assets are routed into iSEI and stSEI liquid staking to maximize yield between cycles. Together, these components create a seamless, automated pipeline—from data ingestion to profitable execution. 
 
-<img src="public/images/f1-arch.png" alt="" width="828px">
+<img src="public/images/Screenshot 2025-08-24 at 10.32.58 PM.png" alt="" width="828px">
 
 
 # Motivation
@@ -98,22 +100,22 @@ Below is a breakdown of SeiTrage's features, designed to optimize the entire arb
 
 ### 1. **AI-Driven Prediction**
 Analyze on-chain data (DEX volumes, order books, liquidity) and off-chain sentiment (social media, news) to forecast imminent price discrepancies. ZerePy’s machine learning models continually refine these predictions.
-<img src="public/images/f4-prediction.png" alt="" width="828px">
+<img src="public/images/ssss.png" alt="" width="828px">
 
 ### 2. **Multi-DEX & Multi-Chain Integration**
 Aggregate price data from multiple DEXs (e.g., Uniswap, SushiSwap) and across different blockchains. deBridge ensures smooth token transfers between SEI and other chains for broader arbitrage opportunities.
-<img src="public/images/f8-pancakeswap.png" alt="" width="828px">
+<img src="public/images/Screenshot 2025-08-24 at 10.56.17 PM.png" alt="" width="828px">
 <img src="public/images/f9-uniswap.png" alt="" width="828px">
 
 ### 3. **Twitter Sentiment Analysis**
 
 The Twitter Sentiment Analysis feature uses ZerePy to scrape and analyze tweets on specific coins and DEX performance, deriving sentiment scores to enhance the predictive model with real-time market trends, improving arbitrage accuracy.
-<img src="public/images/f11-twitter.png" alt="" width="828px">
+<img src="public/images/ss.png" alt="" width="828px">
 
 ### 4. **AI-Powered Chat Agent**  
 
 The AI-powered chat agent enables users to get quick responses and real-time information on any coin and the broader Web3 ecosystem. Utilizing advanced NLP models, it understands queries and fetches relevant data from blockchain analytics, exchange data, and sentiment analysis tools. By providing instant insights and trend analysis, it enhances user decision-making, making SeiTrage a powerful tool for Web3 traders and investors.
-<img src="public/images/f5-chatbot.png" alt="" width="828px">
+<img src="public/images/Screenshot 2025-08-24 at 11.06.11 PM.png" alt="" width="828px">
 
 ### 5. **Sei MCP Integration**  
 
@@ -129,28 +131,29 @@ The AI-powered chat agent enables users to get quick responses and real-time inf
 •⁠  ⁠*Natural language control*: End users don’t need to understand blockchain APIs or write code.  
 •⁠  ⁠*AI-friendly integration*: Easily extended and discoverable by conversational AI assistants.
 
-<img src="public/images/f5-chatbot.png" alt="" width="828px">
+<img src="public/images/Screenshot 2025-08-24 at 5.30.18 PM.png" alt="" width="828px">
+<img src="public/images/Screenshot 2025-08-24 at 5.31.46 PM.png" alt="" width="828px">
 
 ### 6. **Personalized Trending Tokens**  
 
 This feature suggests trending tokens based on the social media activity of people you follow. By analyzing influencers' interactions, it curates personalized token trends, helping users stay ahead in the Web3 ecosystem.
-<img src="public/images/f7-personilzed_tokens.png" alt="" width="828px">
+<img src="public/images/Screenshot 2025-08-24 at 11.08.12 PM.png" alt="" width="828px">
 
 ### 7. **Liquid Staking**
 
 Sei introduces liquid staking with **Silo (iSEI)** and **Kryptonite (stSEI)**, allowing users to stake assets while retaining liquidity. This enhances capital efficiency by enabling participation in DeFi strategies while earning staking rewards. By integrating liquid staking, Sei strengthens its ecosystem, driving higher user engagement, increasing protocol TVL, and fostering a more dynamic staking economy.
-<img src="public/images/f10-liquid-staking.png" alt="" width="828px">
+<img src="public/images/Screenshot 2025-08-24 at 11.08.32 PM.png" alt="" width="828px">
 
 ### 8. **Allora Network Integration**
  Supports short-term price prediction of major cryptocurrencies like BTC, Ethereum, and other coins to enhance arbitrage strategies.
-<img src="public/images/f13-allora.png" alt="" width="828px">
+<img src="public/images/WhatsApp Image 2025-08-24 at 23.50.09.jpeg" alt="" width="828px">
 
 
 ### 9. **User-Friendly Dashboard**
 - **Real-Time Analytics:** View predicted arbitrage windows, potential profit, and execution status.
 - **Wallet Integration:** Connect popular wallets (e.g., MetaMask, WalletConnect) for secure interactions.
 - **Trade Logs:** Track historical performance and refine strategy using detailed trade histories.
-<img src="public/images/f12-dashboard.png" alt="" width="828px">
+<img src="public/images/Screenshot 2025-08-24 at 11.09.26 PM.png" alt="" width="828px">
 
 # Concepts
 
